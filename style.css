@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+.navbar{
+    padding: 0 2em;
+    height: 5em;
+    background-color: #94a3b8;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbarelements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1em;
+}
+.navelement a{
+    font-size: 1.3em;
+    color: whitesmoke;
+    transition: 900ms;
+    position: relative;
+}
+.navelement a:hover{
+    color: #188178;
+}
+.navbar .navbarelements .navelement a::after{
+    content: "";
+    height: 3px;
+    width: 0px;
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+    transition: 0.5s;
+}
+.navbar .navbarelements .navelement:hover a::after{
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: #188178;
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+}
