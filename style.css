@@ -1,18 +1,32 @@
+:root{
+    --white:#ffffff;
+    --grey:#f5f5f5;
+    --color:#188178;
+    --bg-1:#94a3b8;
+    --bg-2:#fddde4;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    line-height: calc(1em + 0.5rem);
 }
 a{
     text-decoration: none;
     color:black;
 }
+.header{
+    position: sticky;
+    top: 0px;
+}
 .navbar{
     padding: 0 2em;
     height: 5em;
-    background-color: #94a3b8;
-    color: whitesmoke;
+    background-color: var(--bg-1);
+    color: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,12 +39,12 @@ a{
 }
 .navelement a{
     font-size: 1.3em;
-    color: whitesmoke;
+    color: var(--white);
     transition: 900ms;
     position: relative;
 }
 .navelement a:hover{
-    color: #188178;
+    color: var(--color);
 }
 .navbar .navbarelements .navelement a::after{
     content: "";
@@ -45,7 +59,7 @@ a{
     content: "";
     height: 3px;
     width: 100%;
-    background-color: #188178;
+    background-color: var(--color);
     position: absolute;
     bottom: -4px;
     left: 0px;
@@ -65,7 +79,7 @@ a{
     padding-bottom: 15px;
 }
 .hero h1{
-    color: #088178;
+    color: var(--color);
 }
 .hero button{
     background-image: url(images/button.png);
@@ -76,4 +90,43 @@ a{
     background-repeat: no-repeat;
     font-size: 1.1rem;
     font-weight: bold;
+    transition: 0.5s;
+}
+.hero button:hover{
+    color: var(--white);
+}
+.feature{
+    margin: 3em;
+    border-radius: 20px;
+    background-color: var(--grey);
+    transition: 0.7s;
+}
+.feature:hover{
+    background-color: var(--white);
+    box-shadow: 20px 20px 90px rgba(0, 0, 0, 0.3), -20px -20px 90px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);
+}
+.fe-boxcontainer{
+    display: flex;
+    justify-content: space-around;
+}
+.fe-box{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+.feature .fe-box h4{
+    margin: .2em;
+    padding: 0.5em 1em;
+    color: var(--color);
+    background-color: var(--bg-2);
+    border-radius: 0.5em;
+    transition: 0.4s;
+}
+.feature .fe-box h4:hover{
+    color: var(--bg-2);
+    background-color: var(--color);
+    border-radius: 0.9em;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 30px pink, -5px -5px 30px pink;
 }
