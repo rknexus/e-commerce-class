@@ -12,14 +12,15 @@
     font-family: sans-serif;
     scroll-behavior: smooth;
     scrollbar-width: thin;
+    user-select: none;
     line-height: calc(1em + 0.5rem);
 }
 a{
     text-decoration: none;
     color:black;
 }
-.header{
-    position: sticky;
+.section1{
+    /* position: sticky; */
     top: 0px;
 }
 .navbar{
@@ -121,6 +122,7 @@ a{
     color: var(--color);
     background-color: var(--bg-2);
     border-radius: 0.5em;
+    text-align: center;
     transition: 0.4s;
 }
 .feature .fe-box h4:hover{
@@ -129,4 +131,53 @@ a{
     border-radius: 0.9em;
     transform: scale(1.1);
     box-shadow: 5px 5px 30px pink, -5px -5px 30px pink;
+}
+.section4-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section4-header{
+    text-align: center;
+}
+.section4-product_container{
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+    margin: 1em;
+    padding: 1em;
+}
+.section4-product_container_mt{
+    margin-top: -30px;
+}
+.section4-product{
+    padding: 1em;
+    border: 1px solid var(--color);
+    border-radius: 2em;
+    transition: 0.5s;
+
+    &:hover{
+        border-radius: 1em;
+        transform: scale(1.05);
+        background-color: var(--bg-1);
+        color: var(--grey);
+    }
+}
+.section4-product img{
+    width: 100%;
+    border-radius: 2em;
+    transition: 0.3s;
+
+    &:hover{
+        border-radius: 50%;
+    }
+}
+.fa-star{
+    color: gold;
+    transition: 0.3s;
+
+    &:hover{
+        color: yellow;
+    }
 }
