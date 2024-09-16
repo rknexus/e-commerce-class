@@ -144,8 +144,8 @@ a{
 .section4-product_container{
     display: flex;
     justify-content: space-around;
-    gap: 1em;
-    margin: 1em;
+    gap: 2em;
+    margin: 2em;
     padding: 1em;
 }
 .section4-product_container_mt{
